@@ -10,8 +10,8 @@ export interface StructBase {
   structName: string;
   params: ParameterBase;
 }
-export interface ParameterBase extends Record<string, Annotation> {}
-export type Annotation =
+export interface ParameterBase extends Record<string, AnnotationTypes> {}
+export type AnnotationTypes =
   | Type_StructArray<object[]>
   | Type_Struct<object>
   | BooleanAnnotation
@@ -34,7 +34,7 @@ export interface Type_StructArray<
 }
 
 export interface Type_Struct<
-  T extends {},
+  T extends object,
   StructAnnotation extends StructBase = StructBase
 > extends HasStruct {
   type: "struct";
