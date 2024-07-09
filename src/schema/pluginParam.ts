@@ -9,7 +9,6 @@ export interface PluginBase {
   params: ParameterBase;
 }
 
-export interface PluginParam<Params extends Record<string, unknown>>
-  extends PluginBase {
+export interface PluginParam<Params extends object> extends PluginBase {
   params: Parameter<Params>;
 }
