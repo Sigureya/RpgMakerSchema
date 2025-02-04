@@ -1,7 +1,9 @@
-import { ComboAnnotation, MultilineString, StringArg } from "./strings";
-import {
+import type{
   Actor,
   Armor,
+  ComboAnnotation,
+   MultilineString,
+    StringArg,
   Class,
   CommonEvent,
   Item,
@@ -12,7 +14,7 @@ import {
   Switch,
   Troop,
   Weapon,
-} from "./numbers";
+} from "./primitive";
 
 const ANNOTATION_STRING: StringArg = {
   type: "string",
